@@ -1,2 +1,1 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/PavelShell/devops-for-programmers-project-74/workflows/hexlet-check/badge.svg)](https://github.com/PavelShell/devops-for-programmers-project-74/actions)
+Docker Compose project
