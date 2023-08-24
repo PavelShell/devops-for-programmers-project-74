@@ -1,6 +1,7 @@
 services:
     app:
-        build: .
-        volumes:
-            - "./app:/app"
+        build: 
+            context: .
+            dockerfile: Dockerfile.production
         command: npm test
+        image: sagser/devops-for-programmers-project-74
