@@ -2,4 +2,5 @@ run:
 	docker compose up
 
 test:
-	docker compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
+	cp app/.env.example app/.env
+	docker compose --env-file app/.env -f docker-compose.yml up --abort-on-container-exit

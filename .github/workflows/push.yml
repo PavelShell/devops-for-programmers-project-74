@@ -1,4 +1,4 @@
-name: My first workflow
+name: Assemble and push to dockerhub
 on: push
 jobs:
   test-and-push-to-dockerhub:
