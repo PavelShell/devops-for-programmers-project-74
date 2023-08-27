@@ -5,11 +5,15 @@ services:
             service: app
         ports:
             - "8000:8000"
-        command: npm run dev
+        command: ["bash", "-c", "sleep 3 && npm start"]
         volumes:
             - "./app:/app"
         build:
             dockerfile: Dockerfile
+    db:
+        extends:
+            file: docker-compose.yml
+            service: db
     caddy:
         image: caddy
         ports:
