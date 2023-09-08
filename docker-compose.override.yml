@@ -1,21 +1,16 @@
 services:
     app:
-        extends:
-            file: docker-compose.yml
-            service: app
         ports:
             - "8000:8000"
         command: ["bash", "-c", "sleep 3 && npm start"]
         volumes:
             - "./app:/app"
         build:
+            context: .
             dockerfile: Dockerfile
-    db:
-        extends:
-            file: docker-compose.yml
-            service: db
     caddy:
         image: caddy
+        restart: unless-stopped
         ports:
             - "80:80"
             - "443:443"

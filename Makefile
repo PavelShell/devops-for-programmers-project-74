@@ -1,5 +1,6 @@
 run:
-	docker compose up
+	cp app/.env.example app/.env
+	docker compose --env-file app/.env up app db caddy
 
 test:
 	cp app/.env.example app/.env
